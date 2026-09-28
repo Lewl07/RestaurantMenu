@@ -18,10 +18,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        ComboBox cb1 = new ComboBox();
-        ComboBox cb2 = new ComboBox();
-        ComboBox cb3 = new ComboBox();
-        ComboBox cb4 = new ComboBox();
+        ComboBox<String> Beverage = new ComboBox<String>();
+        ComboBox<String> Appetizer = new ComboBox<String>();
+        ComboBox<String> mainCourse = new ComboBox<String>();
+        ComboBox<String> dessert = new ComboBox<String>();
+        
+        
     }
 
     public static void main(String[] args) {
