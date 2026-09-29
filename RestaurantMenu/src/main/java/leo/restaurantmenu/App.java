@@ -55,13 +55,17 @@ public class App extends Application {
         Label tipAmountLabel = new Label("Tip: $0.00");
         Label totalLabel = new Label("Total: $0.00");
         
+        VBox calc = new VBox(10);
+        calc.getChildren().addAll(tipSlider, tipLabel, subtotalLabel, taxLabel,
+                tipAmountLabel, totalLabel);
+        
         vbBeverage.getChildren().addAll(beverage);
         vbAppetizer.getChildren().addAll(appetizer);
         vbMainCourse.getChildren().addAll(mainCourse);
         vbDessert.getChildren().addAll(dessert);
         
         root.getChildren().addAll(vbBeverage, vbAppetizer,
-                vbMainCourse, vbDessert);
+                vbMainCourse, vbDessert, calc);
         
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
