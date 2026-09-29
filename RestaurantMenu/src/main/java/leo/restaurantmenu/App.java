@@ -50,7 +50,7 @@ public class App extends Application {
         
         Slider tipSlider = new Slider(0, 20, 0);
         Label tipLabel = new Label("Tip: 0%");
-        Label subtotalLabel = new Label("Subtotal: $0.00");
+        Label subTotalLabel = new Label("Subtotal: $0.00");
         Label taxLabel = new Label("Tax: $0.00");
         Label tipAmountLabel = new Label("Tip: $0.00");
         Label totalLabel = new Label("Total: $0.00");
