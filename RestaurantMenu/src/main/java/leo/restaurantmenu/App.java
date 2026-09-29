@@ -61,8 +61,13 @@ public class App extends Application {
         Label tipAmountLabel = new Label("Tip: $0.00");
         Label totalLabel = new Label("Total: $0.00");
         
-        double subtotal = 0.00;
+        double[] subtotal = {0.00};
         double taxRate = 0.15;
+        
+        beverage.setOnAction(e -> {
+            int i = beverage.getSelectionModel().getSelectedIndex();
+            subtotal[0] += beveragePrices[i];
+        });
         
         tipSlider.valueProperty().addListener((observable, oldValue, newValue)
                 -> {
