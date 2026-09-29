@@ -92,7 +92,7 @@ public class App extends Application {
             double taxValue = subtotal[0] * taxRate;
             String taxFormatted = String.format("Tax: $%.2f", taxValue);
             
-            double tipAmount = subtotal[0] * newValue.doubleValue();
+            double tipAmount = subtotal[0] * (newValue.doubleValue() / 100.00);
             String tipFormatted = String.format("Tip: $%.2f", tipAmount);
             
             double totalPrice = subtotal[0] + taxValue + tipAmount;
