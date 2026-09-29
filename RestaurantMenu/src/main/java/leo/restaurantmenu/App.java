@@ -22,8 +22,8 @@ public class App extends Application {
     public void start(Stage stage) {
         VBox root = new VBox();
         
-        ComboBox<String> Beverage = new ComboBox<String>();
-        ComboBox<String> Appetizer = new ComboBox<String>();
+        ComboBox<String> beverage = new ComboBox<String>();
+        ComboBox<String> appetizer = new ComboBox<String>();
         ComboBox<String> mainCourse = new ComboBox<String>();
         ComboBox<String> dessert = new ComboBox<String>();
         
