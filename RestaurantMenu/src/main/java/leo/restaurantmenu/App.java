@@ -107,6 +107,10 @@ public class App extends Application {
         });
         
         Button clearBtn = new Button("Clear Bill");
+        clearBtn.setOnAction(e -> {
+            subtotal[0] = 0.00;
+            tipSlider.setValue(0);
+        });
 
         VBox calc = new VBox(10);
         calc.getChildren().addAll(tipSlider, tipLabel, subTotalLabel, taxLabel,
