@@ -86,14 +86,23 @@ public class App extends Application {
         
         tipSlider.valueProperty().addListener((observable, oldValue, newValue)
                 -> {
-            
             String tipValue = String.format("Tip: %.0f%%", newValue);
+            String subtotalValue = String.format("Subtotal: $%.2f", subtotal[0]);
+            
+            double taxValue = subtotal[0] * taxRate;
+            String taxFormatted = String.format("Tax: $%.2f", taxValue);
+            
+            double tipAmount = subtotal[0] * newValue.doubleValue();
+            String tipFormatted = String.format("Tip: $%.2f", tipAmount);
+            
+            double totalPrice = subtotal[0] + taxValue + tipAmount;
+            String totalFormatted = String.format("Total: $%.2f", totalPrice);
             
             tipLabel.setText(tipValue);
-            subTotalLabel.setText("Subtotal: $" );    //
-            taxLabel.setText("Tax: $" );    //      //
-            tipAmountLabel.setText("Tip: $" );    //
-            totalLabel.setText("Total: $" );    //
+            subTotalLabel.setText(subtotalValue);
+            taxLabel.setText(taxFormatted);
+            tipAmountLabel.setText(tipFormatted);
+            totalLabel.setText(totalFormatted);
         });
         
         VBox calc = new VBox(10);
