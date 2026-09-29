@@ -57,7 +57,10 @@ public class App extends Application {
         
         tipSlider.valueProperty().addListener((observable, oldValue, newValue)
                 -> {
-            tipLabel.setText("Tip: " + newValue + "%");
+            
+            String tipValue = String.format("Tip: %.0f%%", newValue);
+            
+            tipLabel.setText(tipValue);
             subTotalLabel.setText("Subtotal: $" );    //
             taxLabel.setText("Tax: $" );    //      //
             tipAmountLabel.setText("Tip: $" );    //
