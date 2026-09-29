@@ -35,14 +35,18 @@ public class App extends Application {
         ComboBox<String> mainCourse = new ComboBox<String>();
         ComboBox<String> dessert = new ComboBox<String>();
         
-        String[] beverages = {"Coffee", "Tea", "Soft Drink", "Water", "Milk",
-        "Juice"};
-        String[] appetizers = {"Soup", "Salad", "Spring Rolls", "Garlic Bread",
-        "Chips and Salsa"};
-        String[] mCourses = {"Steak", "Grilled Chicken", "Chicken Alfredo",
-        "Turkey Club", "Shrimp Scampi", "Pasta", "Fish and Chips"};
-        String[] desserts = {"Apple Pie", "Carrot Cake", "Mud Pie", "Pudding",
-        "Apple Crisp"};
+        String[] beverages = {"Coffee ($2.50)", "Tea ($2.00)",
+            "Soft Drink ($1.75)", "Water ($2.95)", "Milk ($1.50)",
+            "Juice ($2.50)"};
+        String[] appetizers = {"Soup ($4.50)", "Salad ($3.75)",
+            "Spring Rolls ($5.25)", "Garlic Bread ($3.00)", 
+            "Chips and Salsa ($6.95)"};
+        String[] mCourses = {"Steak ($15.00)", "Grilled Chicken ($13.50)",
+            "Chicken Alfredo ($13.95)", "Turkey Club ($11.90)",
+            "Shrimp Scampi ($18.99)", "Pasta ($11.75)",
+            "Fish and Chips ($12.25)"};
+        String[] desserts = {"Apple Pie ($5.95)", "Carrot Cake ($4.50)",
+            "Mud Pie ($4.75)", "Pudding ($3.25)", "Apple Crisp ($5.98)"};
         
         double[] beveragePrices = {2.50, 2.00, 1.75, 2.95, 1.50, 2.50};
         double[] appetizerPrices = {4.50, 3.75, 5.25, 3.00, 6.95};
@@ -110,10 +114,6 @@ public class App extends Application {
         clearBtn.setOnAction(e -> {
             subtotal[0] = 0.00;
             tipSlider.setValue(0);
-            beverage.setSelectionModel(null);
-            appetizer.setSelectionModel(null);
-            mainCourse.setSelectionModel(null);
-            dessert.setSelectionModel(null);
         });
 
         VBox calc = new VBox(10);
