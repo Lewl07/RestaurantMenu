@@ -1,6 +1,7 @@
 package leo.restaurantmenu;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -41,6 +42,11 @@ public class App extends Application {
         "Turkey Club", "Shrimp Scampi", "Pasta", "Fish and Chips"};
         String[] desserts = {"Apple Pie", "Carrot Cake", "Mud Pie", "Pudding",
         "Apple Crisp"};
+        
+        beverage.setItems(FXCollections.observableArrayList(beverages));
+        appetizer.setItems(FXCollections.observableArrayList(appetizers));
+        mainCourse.setItems(FXCollections.observableArrayList(mCourses));
+        dessert.setItems(FXCollections.observableArrayList(desserts));
         
         Slider tipSlider = new Slider(0, 20, 0);
         Label tipLabel = new Label("Tip: 0%");
