@@ -110,11 +110,15 @@ public class App extends Application {
         clearBtn.setOnAction(e -> {
             subtotal[0] = 0.00;
             tipSlider.setValue(0);
+            beverage.setSelectionModel(null);
+            appetizer.setSelectionModel(null);
+            mainCourse.setSelectionModel(null);
+            dessert.setSelectionModel(null);
         });
 
         VBox calc = new VBox(10);
         calc.getChildren().addAll(tipSlider, tipLabel, subTotalLabel, taxLabel,
-                tipAmountLabel, totalLabel);
+                tipAmountLabel, totalLabel, clearBtn);
         
         vbBeverage.getChildren().addAll(beverage);
         vbAppetizer.getChildren().addAll(appetizer);
