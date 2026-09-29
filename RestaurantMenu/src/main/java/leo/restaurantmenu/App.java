@@ -61,6 +61,9 @@ public class App extends Application {
         Label tipAmountLabel = new Label("Tip: $0.00");
         Label totalLabel = new Label("Total: $0.00");
         
+        double subtotal = 0.00;
+        double taxRate = 0.15;
+        
         tipSlider.valueProperty().addListener((observable, oldValue, newValue)
                 -> {
             
