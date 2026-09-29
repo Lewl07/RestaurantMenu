@@ -21,12 +21,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        VBox root = new VBox();
+        HBox root = new HBox();
         
-        HBox hbBeverage = new HBox(10);
-        HBox hbAppetizer = new HBox(10);
-        HBox hbMainCourse = new HBox(10);
-        HBox hbDessert = new HBox(10);
+        VBox vbBeverage = new VBox(10);
+        VBox vbAppetizer = new VBox(10);
+        VBox vbMainCourse = new VBox(10);
+        VBox vbDessert = new VBox(10);
         
         ComboBox<String> beverage = new ComboBox<String>();
         ComboBox<String> appetizer = new ComboBox<String>();
@@ -48,6 +48,18 @@ public class App extends Application {
         Label taxLabel = new Label("Tax: $0.00");
         Label tipAmountLabel = new Label("Tip: $0.00");
         Label totalLabel = new Label("Total: $0.00");
+        
+        vbBeverage.getChildren().addAll(beverage);
+        vbAppetizer.getChildren().addAll(appetizer);
+        vbMainCourse.getChildren().addAll(mainCourse);
+        vbDessert.getChildren().addAll(dessert);
+        
+        root.getChildren().addAll(vbBeverage, vbAppetizer,
+                vbMainCourse, vbDessert);
+        
+        Scene scene = new Scene(root, 600, 400);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) {
