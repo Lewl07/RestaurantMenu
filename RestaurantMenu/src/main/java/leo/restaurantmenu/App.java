@@ -45,7 +45,8 @@ public class App extends Application {
         
         double[] beveragePrices = {2.50, 2.00, 1.75, 2.95, 1.50, 2.50};
         double[] appetizerPrices = {4.50, 3.75, 5.25, 3.00, 6.95};
-        double[] mCoursePrices = {15.00, 13.50, 13.95, 11.90, 18.99, 11.75, 12.25};
+        double[] mCoursePrices = {15.00, 13.50, 13.95, 11.90, 18.99, 11.75,
+            12.25};
         double[] dessertPrices = {5.95, 4.50, 4.75, 3.25, 5.98};
         
         beverage.setItems(FXCollections.observableArrayList(beverages));
