@@ -69,6 +69,21 @@ public class App extends Application {
             subtotal[0] += beveragePrices[i];
         });
         
+        appetizer.setOnAction(e -> {
+            int i = appetizer.getSelectionModel().getSelectedIndex();
+            subtotal[0] += appetizerPrices[i];
+        });
+        
+        mainCourse.setOnAction(e -> {
+            int i = mainCourse.getSelectionModel().getSelectedIndex();
+            subtotal[0] += mCoursePrices[i];
+        });
+        
+        dessert.setOnAction(e -> {
+            int i = dessert.getSelectionModel().getSelectedIndex();
+            subtotal[0] += dessertPrices[i];
+        });
+        
         tipSlider.valueProperty().addListener((observable, oldValue, newValue)
                 -> {
             
