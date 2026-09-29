@@ -55,6 +55,12 @@ public class App extends Application {
         Label tipAmountLabel = new Label("Tip: $0.00");
         Label totalLabel = new Label("Total: $0.00");
         
+        tipSlider.valueProperty().addListener((observable, oldValue, newValue)
+                -> {
+            tipLabel.setText("Tip: " + newValue);
+            
+        });
+        
         VBox calc = new VBox(10);
         calc.getChildren().addAll(tipSlider, tipLabel, subtotalLabel, taxLabel,
                 tipAmountLabel, totalLabel);
