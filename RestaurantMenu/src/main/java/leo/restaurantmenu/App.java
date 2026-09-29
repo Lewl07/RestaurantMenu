@@ -57,8 +57,11 @@ public class App extends Application {
         
         tipSlider.valueProperty().addListener((observable, oldValue, newValue)
                 -> {
-            tipLabel.setText("Tip: " + newValue);
-            
+            tipLabel.setText("Tip: " + newValue + "%");
+            subTotalLabel.setText("Subtotal: $" );    //
+            taxLabel.setText("Tax: $" );    //      //
+            tipAmountLabel.setText("Tip: $" );    //
+            totalLabel.setText("Total: $" );    //
         });
         
         VBox calc = new VBox(10);
