@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -21,6 +22,11 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         VBox root = new VBox();
+        
+        HBox hbBeverage = new HBox(10);
+        HBox hbAppetizer = new HBox(10);
+        HBox hbMainCourse = new HBox(10);
+        HBox hbDessert = new HBox(10);
         
         ComboBox<String> beverage = new ComboBox<String>();
         ComboBox<String> appetizer = new ComboBox<String>();
