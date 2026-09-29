@@ -65,7 +65,7 @@ public class App extends Application {
         });
         
         VBox calc = new VBox(10);
-        calc.getChildren().addAll(tipSlider, tipLabel, subtotalLabel, taxLabel,
+        calc.getChildren().addAll(tipSlider, tipLabel, subTotalLabel, taxLabel,
                 tipAmountLabel, totalLabel);
         
         vbBeverage.getChildren().addAll(beverage);
