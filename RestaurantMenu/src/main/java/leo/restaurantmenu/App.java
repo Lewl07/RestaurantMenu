@@ -27,6 +27,15 @@ public class App extends Application {
         ComboBox<String> mainCourse = new ComboBox<String>();
         ComboBox<String> dessert = new ComboBox<String>();
         
+        String[] beverages = {"Coffee", "Tea", "Soft Drink", "Water", "Milk",
+        "Juice"};
+        String[] appetizers = {"Soup", "Salad", "Spring Rolls", "Garlic Bread",
+        "Chips and Salsa"};
+        String[] mCourses = {"Steak", "Grilled Chicken", "Chicken Alfredo",
+        "Turkey Club", "Shrimp Scampi", "Pasta", "Fish and Chips"};
+        String[] desserts = {"Apple Pie", "Carrot Cake", "Mud Pie", "Pudding",
+        "Apple Crisp"};
+        
         Slider tipSlider = new Slider(0, 20, 0);
         Label tipLabel = new Label("Tip: 0%");
         Label subtotalLabel = new Label("Subtotal: $0.00");
